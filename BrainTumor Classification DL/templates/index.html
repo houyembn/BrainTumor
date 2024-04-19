@@ -1,0 +1,154 @@
+{% extends "import.html" %} 
+{% block content %}
+
+
+
+ <body>
+  <header>
+    <div class="container">
+        <img src="../static/images/aa.jpg" style="" class="banner">
+        <a href="#" class="logo">Brain Tumor</a>
+        <div class="toggle"></div>
+      </div>
+    
+    <nav>
+      <ul>
+        <li><a href="#A propos">Qu'est-ce qu'une tumeur cérébrale?</a></li>
+        <li><a href="#Paquets">Risques & Occurrence</a></li>
+        <li><a href="#Critiques" style="padding-top: 20px;">Prédection</a></li>
+      </ul>
+    </nav>
+  </header>
+ 
+  
+ <main>
+   <!---- a propos section debut -->
+  <section class="A propos" id="A propos">
+    <div class="container">
+      <div class="about-content grid">
+          <div class="about-left">
+              <img src="../static/images/4.png" style="width: 450PX; height: 500px; padding-bottom: -20px;" alt="">
+          </div>
+          <div class="about-right">
+            <div class="title">
+                <h2>Qu'est-ce qu'une tumeur cérébrale?
+                </h2>
+            </div>
+            <p class="lead">Un tumor cerebral est une croissance de cellules anormales dans le cerveau. L'anatomie du cerveau est très complexe, avec différentes parties responsables de différentes fonctions du système nerveux. Les tumeurs cérébrales peuvent se développer dans n'importe quelle partie du cerveau ou du crâne, y compris sa membrane protectrice, la base du crâne, le tronc cérébral, les sinus et la cavité nasale, et de nombreuses autres zones. Il existe plus de 120 types différents de tumeurs qui peuvent se développer dans le cerveau, selon le tissu dont elles proviennent.</p>
+
+          </div>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("scroll",function(){
+          const header = document.querySelector('header');
+          header.classList.toggle('sticky', window.scrollY > 0);
+      });
+      const navigation = document.querySelector('nav');
+      document.querySelector(' .toggle').onclick = function(){
+       this.classList.toggle('active');
+      navigation.classList.toggle('active');
+      }
+    </script>
+    
+  </section>
+    
+
+  
+  <section class="pakages" id="Paquets">
+
+    <div class="container">
+        <div class="about-content grid">
+            
+            <div class="about-left" style="padding-top: 0px;">
+              <div class="title">
+                  <h2>Quelle est la fréquence des tumeurs cérébrales et sont-elles dangereuses ?
+                  </h2>
+              </div>
+              <p class="lead">
+                Aux États-Unis, les tumeurs cérébrales et du système nerveux touchent environ 30 adultes sur 100 000. Les tumeurs cérébrales sont dangereuses car elles peuvent exercer une pression sur les parties saines du cerveau ou se propager dans ces zones. Certaines tumeurs cérébrales peuvent également être cancéreuses ou devenir cancéreuses. Elles peuvent causer des problèmes si elles bloquent la circulation du liquide autour du cerveau, ce qui peut entraîner une augmentation de la pression à l'intérieur du crâne. Certains types de tumeurs peuvent se propager à travers le liquide céphalorachidien vers des zones éloignées du cerveau ou de la colonne vertébrale.</p>
+              
+            </div>
+
+            <div class="about-right vv " style="padding-top: 1à0px;">
+                <img src="../static/images/1.png" style="width: 500px; height: 560px; padding-top: -90px; padding-left: 50px;" alt="">
+            </div>
+        </div>
+      </div>
+   
+  </section>
+   
+  <section class="critique" id="Critiques">
+    <div class="title">
+      <h6>Prédection</h6>
+    </div>
+    <div class="critique-slider">
+      <div class="wrapper"> 
+        <div class="slider">
+          <div class="box">
+
+            <form id="upload-file" style="padding-left: 20px;" method="post" enctype="multipart/form-data">
+                <input type="file" style="padding-left: 20px;" name="file" class="btn btn-success" id="imageUpload" accept=".png, .jpg, .jpeg">
+           </form>
+       
+       
+           <div class="image-section" style="display:none;">
+                <img id="imagePreview"  class="img-responsive" src="#" style=" margin-top: 40px; margin-left: 30px;"/><br><br>
+                <div>
+                   <button type="button" class="btn btn-info btn-lg " style=" margin-left: 30px;" id="btn-predict">Prédection!</button>
+                </div>
+           </div>
+       
+       
+       
+           <div class="loader" style="display:none;"></div>
+       
+           <h3 id="result" style="padding-left: 150px; padding-right: 120px; text-align: center;">
+               <span> </span>
+           </h3>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  </section>
+
+ </main>
+  
+ </body>
+
+
+
+
+<!-- <center>
+<br><h2>Brain Tumor Classification Using Deep Learning</h2><br>
+
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+         <input type="file" name="file" class="btn btn-success" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+
+    <div class="image-section" style="display:none;">
+         <img id="imagePreview"  class="img-responsive" src="#" style="width:300px;height:300px;"/><br><br>
+         <div>
+            <button type="button" class="btn btn-info btn-lg " id="btn-predict">Predict!</button>
+         </div>
+    </div>
+
+
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result">
+        <span> </span>
+    </h3>
+
+
+    
+
+
+</center><br><br> -->
+{% endblock %}
